@@ -2,7 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/iiitu.webp';
 import Faq from './Faq';
+import Elite from './Elite';
 import Sponsors from './Sponsors';
+
 
 const Hero = () => {
     return (
@@ -78,9 +80,9 @@ const Hero = () => {
                     </div>
                 </motion.div>
             </div>
-
-            <Faq />
-            <Sponsors />
+<Elite />
+<Sponsors />
+<Faq />
 
         </section>
     );

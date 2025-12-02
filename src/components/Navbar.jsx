@@ -10,6 +10,12 @@ const Navbar = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
 
+    const navBackground = isOpen
+  ? "bg-transparent"
+  : isScrolled
+  ? "bg-black/80 backdrop-blur-md border-b border-white/40"
+  : "bg-gradient-to-b from-black/60 to-transparent";
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -29,10 +35,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className={`fixed top-0 left-0 w-full z-50 py-6 px-8 flex justify-between items-center transition-colors duration-150
-                ${
-        isScrolled
-            ? "bg-black/80 backdrop-blur-md border-b border-white/40"  
-            : "bg-gradient-to-b from-black/60 to-transparent "                 }`}
+                ${navBackground}`}
         >
             <Link to="/" className="text-white font-minecraft text-xl md:text-2xl tracking-wider flex items-center gap-3 hover:text-accent-400 transition-colors duration-300 cursor-pointer">
                 <span className="text-accent-400 text-sm animate-pulse">►</span>
