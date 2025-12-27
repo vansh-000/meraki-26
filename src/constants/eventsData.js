@@ -9,9 +9,9 @@
  */
 
 import minecraftimg from "../assets/minecraft_dungeons_placeholder.webp";
-import skyCircuitImg from "../assets/SkyCircuit.png";
+import skyCircuitImg from "../assets/skycircuit.png";
 import roboDriveImg from "../assets/itsRoboDrive.png";
-import hackTheThroneImg from "../assets/Hack The Throne.png";
+import hackTheThroneImg from "../assets/hack_the_throne.png";
 import arenaXImg from "../assets/Esports.jpeg";
 
 /**
