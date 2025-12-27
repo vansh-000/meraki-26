@@ -320,7 +320,8 @@ const observer = new IntersectionObserver(
 |-----------|----------------|--------------|
 | `Hero.jsx` | Parallax scroll, hero sequence timing | #animation-variants |
 | `Box.jsx` | 3D CSS flip card, perspective | #3d-css-transforms |
-| `Elite.jsx` | Tab UI, AnimatePresence, bevel borders | #minecraft-bevel-borders |
+| `FlagshipEvent.jsx` | Tab UI, AnimatePresence, bevel borders | #minecraft-bevel-borders |
+| `Workshops.jsx` | Card grid, stagger animations, difficulty badges | #animation-variants, #responsive-breakpoints |
 | `Navbar.jsx` | Glassmorphism, scroll-triggered styling | #glassmorphism |
 | `Contact.jsx` | Form validation, motion orchestration | #animation-variants |
 | `Sponsors.jsx` | Poster frame styling, stagger animations | #sectiontransition |
@@ -328,4 +329,88 @@ const observer = new IntersectionObserver(
 
 ---
 
-*Last updated: 2025-12-23*
+*Last updated: 2025-12-27*
+
+---
+
+## Section-Specific Documentation
+
+### Flagship Event Section (`FlagshipEvent.jsx`)
+
+Renamed from "Elite Events" to "Flagship Event" for better branding.
+
+**Features:**
+- Tab-based UI with left sidebar (desktop) / horizontal scroll (mobile)
+- Instant tab switching with no animation lag
+- Clean Minecraft-inspired borders with cyan accents
+- Responsive design with mobile-first approach
+
+**Key State:**
+- `activeTab` - Controls which event details are displayed
+- `scrollYProgress` - Drives entrance animation from scroll position
+
+**Design Notes:**
+- Desktop: Vertical tab stack (33% width) with detail panel (67%)
+- Mobile: Horizontal scrollable tabs at top with full-width detail panel below
+- Tab borders transition from gray (inactive) to cyan (active)
+- Detail panel features image zoom on hover and orange CTA button
+
+### Workshops Section (`Workshops.jsx`)
+
+New section added between Flagship Event and Sponsors sections.
+
+**Features:**
+- Responsive grid layout (1 col mobile, 2 cols tablet, 4 cols desktop)
+- Animated workshop cards with:
+  - Featured image, title, and short description text
+  - Smooth hover lift animations (Y-axis)
+  - Cyan gradient CTA buttons
+- Optional subtle background treatment behind cards (e.g., light grid pattern overlay)
+- Staggered entrance animations for each card
+
+**Card Components:**
+- **Image section**: Featured image (can optionally include a gradient overlay)
+- **Content section**: Title and description text
+- **CTA button**: Cyan gradient with glow effect on hover
+
+**Difficulty Level Color Guidelines (optional extension):**
+If you introduce difficulty tags to workshop cards in the future, use these recommended colors:
+```javascript
+Beginner → Green (#22c55e)
+Intermediate → Yellow (#eab308)
+Advanced → Red (#ef4444)
+```
+
+**Responsive Behavior:**
+- Desktop: 4-column grid with lg: breakpoint
+- Tablet: 2-column grid with md: breakpoint
+- Mobile: 1-column grid with full width
+- Card heights adjust with responsive padding
+
+**Animations:**
+- Scroll-linked entrance (fade + slide up)
+- Staggered card reveals (100ms delay between cards)
+- Hover lift effect (8px Y translation)
+- Scale button on hover/tap feedback
+
+---
+
+## Migration Notes (Elite → FlagshipEvent)
+
+If you renamed this component locally, update these files:
+
+1. **Import statements:**
+   ```javascript
+   // OLD: import Elite from "./Elite";
+   import FlagshipEvent from "./FlagshipEvent";
+   ```
+
+2. **Component usage:**
+   ```javascript
+   // OLD: <Elite />
+   <FlagshipEvent />
+   ```
+
+3. **Section IDs:** Currently uses `id="events"` - consider changing to `id="flagship"` for clarity
+
+4. **Data structure:** Still references `isElite` property in event objects. Consider renaming to `isFlagship` for consistency (optional).
