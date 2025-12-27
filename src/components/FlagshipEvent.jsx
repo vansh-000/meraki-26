@@ -72,7 +72,7 @@ function FlagshipEvent() {
          * Gradient Blending - Section Transitions
          * 
          * Top gradient blends from About section (#080808)
-         * Bottom gradient blends to Workshops section (#080808)
+         * Bottom gradient blends to Sponsors section (#080808)
          * 
          * @see DOCS.md#gradient-blending
          */}
