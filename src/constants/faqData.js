@@ -20,8 +20,8 @@
 export const faqData = [
     {
         id: 1,
-        question: "When is Meraki held?",
-        answer: "Usually in the spring semester (March–April), though dates vary each year."
+        question: "What is Meraki?",
+        answer: "Meraki is the annual technical fest of IIIT Una, Himachal Pradesh, showcasing innovation and technology through competitions, workshops, and guest lectures."
     },
     {
         id: 2,
@@ -36,22 +36,22 @@ export const faqData = [
     {
         id: 4,
         question: "Are workshops part of Meraki?",
-        answer: "Yes, sessions on AI, coding, robotics, and entrepreneurship are often conducted."
+        answer: "Yes, workshops on RC car building, robotics and programming are conducted."
     },
     {
         id: 5,
         question: "Is it open to other colleges?",
-        answer: "Yes, students from nearby and national institutes can participate."
+        answer: "Yes, students from all technical institutes can participate."
     },
     {
         id: 6,
         question: "Is there a registration fee?",
-        answer: "Major events are free, while others require a small fee for inter-college participants."
+        answer: "NO registration fee for any event of Meraki."
     },
     {
         id: 7,
         question: "How does Meraki impact the community?",
-        answer: "Meraki provides a platform for students to showcase their technical skills, learn new technologies, and connect with like-minded individuals. It also helps in building a community of technical enthusiasts."
+        answer: "Meraki provides a platform for students to showcase their technical skills, learn new technologies, and connect with like-minded individuals."
     },
     {
         id: 8,
