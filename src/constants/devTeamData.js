@@ -8,7 +8,7 @@
  */
 
 import vanshImg from '../assets/devteam/vansh.webp';
-import pranavImg from '../assets/devteam/pranav.webp';
+import pranavImg from '../assets/coordinators/pranav.webp';
 import yuvrajImg from '../assets/devteam/yuvraj.webp';
 import deepImg from '../assets/devteam/deep.webp';
 import aryanImg from '../assets/devteam/aryan.webp';
