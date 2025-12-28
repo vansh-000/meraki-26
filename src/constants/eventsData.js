@@ -103,7 +103,7 @@ export const eventDetailsData = {
     },
     'skycircuit': {
         title: 'SKYCIRCUIT',
-        price: '₹15000/-',
+        price: '',
         tags: ['Aeromodelling', 'Drones', 'Aircrafts', 'FPVs'],
         badge: 'POPULAR EVENT',
         description: 'SkyCircuit Showcase is a high-energy drone and aeromodelling showcase...',

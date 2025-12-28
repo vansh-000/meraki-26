@@ -27,7 +27,7 @@ import skPandeyImg from "../assets/experts/ShShyamKrishnaPandey.jpg";
 export const expertTalks = [
     {
         id: 1,
-        name: "Col Subhajeet Naha (Retd)",
+        name: "Col. Subhajeet Naha (Retd)",
         title: "Founder & CTO, Protecte Technologies",
         image: colSubhajeetImg,
         highlights: [
@@ -46,14 +46,13 @@ export const expertTalks = [
             "Roboticist, AI Expert, Entrepreneur",
             "Robotics & Drone Technology",
             "AI & ML",
-            "Cyber Security",
-            "Electric Vehicles"
+            "Cyber Security & Electric Vehicles",
         ]
     },
     {
         id: 3,
         name: "Shri SK Pandey",
-        title: "Scientist/Engineer - SG, ISRO ISTRAC",
+        title: "Scientist/Engineer - SG, ISTRAC ISRO",
         image: skPandeyImg,
         highlights: [
             "Satcom",

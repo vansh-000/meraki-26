@@ -139,7 +139,7 @@ function ExpertTalk() {
                                         key={idx}
                                         className="font-minecraft text-gray-300 text-[10px] sm:text-xs md:text-sm flex items-start gap-1.5 sm:gap-2 leading-tight"
                                     >
-                                        <span className="text-cyan-400 flex-shrink-0">{idx + 1}.</span>
+                                        <span className="text-cyan-400 flex-shrink-0">•</span>
                                         <span className="break-words">{highlight}</span>
                                     </li>
                                 ))}

@@ -21,7 +21,7 @@
 export const galleryCollections = [
     {
         id: 'elite_events',
-        title: 'Elite Events',
+        title: 'Flagship Events',
         folder: 'elite_events',
     },
     {
@@ -36,7 +36,7 @@ export const galleryCollections = [
     },
     {
         id: 'opening',
-        title: 'Opening',
+        title: 'Inauguration',
         folder: 'opening',
     },
     {
