@@ -82,13 +82,13 @@ export const coreCoordinators = [
  * @type {Array<{name: string, role: string, image?: string}>}
  */
 export const dayCoordinators = [
-    { name: 'Awadh', role: 'Day 1 Coordinator', image: awadhImg },
-    { name: 'Sheena', role: 'Day 1 Coordinator', image: sheenaImg },
-    { name: 'Aditya Pandey', role: 'Day 1 Coordinator', image: adityaImg },
-    { name: 'Aryan Raj', role: 'Day 2 Coordinator', image: aryanImg },
-    { name: 'Jayani Srivastava', role: 'Day 2 Coordinator', image: jayaniImg },
-    { name: 'Ridham', role: 'Day 3 Coordinator', image: ridhamImg },
-    { name: 'Purusharth Rana', role: 'Day 3 Coordinator', image: purusharthImg },
+    { name: 'Awadh', role: 'Co-Coordinator', image: awadhImg },
+    { name: 'Sheena', role: 'Co-Coordinator', image: sheenaImg },
+    { name: 'Aditya Pandey', role: 'Co-Coordinator', image: adityaImg },
+    { name: 'Aryan Raj', role: 'Co-Coordinator', image: aryanImg },
+    { name: 'Jayani Srivastava', role: 'Co-Coordinator', image: jayaniImg },
+    { name: 'Ridham', role: 'Co-Coordinator', image: ridhamImg },
+    { name: 'Purusharth Rana', role: 'Co-Coordinator', image: purusharthImg },
 ];
 
 /**

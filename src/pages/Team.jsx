@@ -352,7 +352,7 @@ const Team = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <h3 className="font-pixel text-lg sm:text-xl md:text-2xl text-white text-center mb-6 sm:mb-8">
-            DAY COORDINATORS
+            CO-COORDINATORS
           </h3>
           <motion.div
             className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10"
