@@ -93,6 +93,7 @@ const Navbar = () => {
     { type: "link", to: "/", label: "HOME" },
     { type: "button", action: () => handleNavigation("about"), label: "ABOUT" },
     { type: "link", to: "/schedule", label: "SCHEDULE" },
+    { type: "link", to: "/merchandise", label: "MERCHANDISE" },
     { type: "link", to: "/gallery", label: "GALLERY" },
     { type: "link", to: "/team", label: "TEAM" },
     { type: "button", action: () => handleNavigation("partners"), label: "PARTNERS" },
