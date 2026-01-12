@@ -27,7 +27,7 @@ import ethindiaLogo from '../assets/ethindia.svg';
 const placeholderLogo = iiituLogo;
 const doonLogo = "/doonmerch.webp";
 const gfgLogo = "/gfg-gg-logo.svg";
-const codeforcesLogo = "/codeforces.png";
+const codechefLogo = "/codechef.jpeg";
 
 // Partner Data with Categories
 
@@ -52,7 +52,7 @@ const merchLifestylePartners = [
 const platformPartners = [
     { name: "Unstop", firm: "Unstop", designation: "Platform Partner", logo: unstopLogo, url: "https://unstop.com" },
     { name: "GeeksforGeeks", firm: "GeeksforGeeks", designation: "Platform Partner", logo: gfgLogo, url: "https://www.geeksforgeeks.org/" },
-    { name: "Codeforces", firm: "Codeforces", designation: "Platform Partner", logo: codeforcesLogo, url: "https://codeforces.com/" },
+    { name: "CodeChef", firm: "CodeChef", designation: "Platform Partner", logo: codechefLogo, url: "https://www.codechef.com/" },
     { name: "Devfolio", firm: "Devfolio", designation: "Platform Partner", logo: devfolioLogo, url: "https://devfolio.co" }
 ];
 
