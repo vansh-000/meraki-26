@@ -6,8 +6,8 @@
  * interactive 3D particle effects.
  */
 
-import React, { useEffect, useState, useRef } from "react";
-import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import wallBg from "../assets/sponsors_minecraft_bg.webp";
 import { appleSlideUp, appleScaleIn } from "../utils/motion";
@@ -182,34 +182,7 @@ const getFrameStyles = (tier) => {
  * Minecraft-styled Poster Frame Component with 3D Tilt
  */
 const PartnerCard = ({ partner, index, size = "medium", tier = "wood" }) => {
-    const cardRef = useRef(null);
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const mouseX = useSpring(x, { stiffness: 150, damping: 15 });
-    const mouseY = useSpring(y, { stiffness: 150, damping: 15 });
-
-    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["15deg", "-15deg"]);
-    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-15deg", "15deg"]);
-    const glareX = useTransform(mouseX, [-0.5, 0.5], ["0%", "100%"]);
-    const glareY = useTransform(mouseY, [-0.5, 0.5], ["0%", "100%"]);
-
-    const handleMouseMove = (e) => {
-        const rect = cardRef.current.getBoundingClientRect();
-        const width = rect.width;
-        const height = rect.height;
-        const mouseXVal = e.clientX - rect.left;
-        const mouseYVal = e.clientY - rect.top;
-        const xPct = mouseXVal / width - 0.5;
-        const yPct = mouseYVal / height - 0.5;
-        x.set(xPct);
-        y.set(yPct);
-    };
-
-    const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
-    };
+    // Removed 3D tilt/wobble logic (useMotionValue, useSpring, useTransform, onMouseMove, etc.)
 
     const handleClick = () => {
         if (partner.url) {
@@ -226,35 +199,26 @@ const PartnerCard = ({ partner, index, size = "medium", tier = "wood" }) => {
 
     return (
         <motion.div
-            ref={cardRef}
             className="relative cursor-pointer group"
             variants={appleScaleIn(index * 0.1)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
-            style={{
-                perspective: 1000,
-                rotateX,
-                rotateY,
-                transformStyle: "preserve-3d"
-            }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
             onClick={handleClick}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
         >
             {/* Glow Effect */}
             <div
                 className="absolute inset-0 blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none"
-                style={{ background: styles.innerBorder, transform: "translateZ(-20px)" }}
+                style={{ background: styles.innerBorder }}
             />
 
             {/* Frame Structure */}
-            <motion.div
+            <div
                 className={`relative ${sizeClasses[size]} overflow-hidden`}
                 style={{
                     boxShadow: styles.shadow,
-                    transformStyle: "preserve-3d",
-                    transform: "translateZ(20px)"
                 }}
             >
                 {/* Frame Border Material */}
@@ -291,7 +255,6 @@ const PartnerCard = ({ partner, index, size = "medium", tier = "wood" }) => {
                     {/* Logo */}
                     <div
                         className="w-[75%] h-[75%] flex items-center justify-center relative z-20 transition-transform duration-500 group-hover:scale-110"
-                        style={{ transform: "translateZ(30px)" }}
                     >
                         <img
                             src={partner.logo}
@@ -301,19 +264,19 @@ const PartnerCard = ({ partner, index, size = "medium", tier = "wood" }) => {
                     </div>
                 </div>
 
-                {/* Interactive Glint/Sheen */}
-                <motion.div
+                {/* Interactive Glint/Sheen - Simplified */}
+                <div
                     className="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                     style={{
                         background: `radial-gradient(
-                            circle at ${glareX} ${glareY}, 
+                            circle at center, 
                             rgba(255,255,255,0.3) 0%, 
                             transparent 60%
                         )`,
                         mixBlendMode: "overlay"
                     }}
                 />
-            </motion.div>
+            </div>
 
             {/* Pin/Nail Detail */}
             <div
@@ -322,7 +285,6 @@ const PartnerCard = ({ partner, index, size = "medium", tier = "wood" }) => {
                     background: styles.pinGradient,
                     boxShadow: "0 2px 4px rgba(0,0,0,0.8)",
                     border: '1px solid rgba(255,255,255,0.2)',
-                    transform: "translateZ(25px)"
                 }}
             />
         </motion.div>
