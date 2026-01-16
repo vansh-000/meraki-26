@@ -26,7 +26,7 @@ export const faqData = [
     {
         id: 2,
         question: "When is MERAKI 2026?",
-        answer: "MERAKI 2026 will be held from February 5-7, 2026 at IIIT Una's Saloh campus."
+        answer: "MERAKI 2026 will be held from February 7-9, 2026 at IIIT Una's Saloh campus."
     },
     {
         id: 3,

@@ -190,7 +190,7 @@ const Hero = () => {
           >
             <div className="flex items-center gap-2">
               <span className="text-accent-400">&gt;</span>
-              <span>Feb 5-7, 2026</span>
+              <span>Feb 7-9, 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <span>IIIT Una</span>
