@@ -26,19 +26,36 @@ import mioartaiLogo from '../assets/mioartai.jpg';
 import dopamineStoreLogo from '../assets/dopamine_store.avif';
 import ethindiaLogo from '../assets/ethindia.svg';
 
+// Additional sponsor logos from Partners page
+const abhibusLogo = "/abhibus.png";
+const plutoDronesLogo = "/pluto drones.webp";
+const doonLogo = "/doonmerch.webp";
+const gfgLogo = "/gfg-gg-logo.svg";
+const codechefLogo = "/codechef.jpeg";
+
 /**
- * Partner data array.
+ * Partner data array - combining all sponsors from different categories.
  * @constant
  * @type {Array<{name: string, firm: string, designation: string, logo: string, url?: string}>}
  */
 const partners = [
-  { name: "mioArtAI", firm: "mioArtAI", designation: "Theme Partner", logo: mioartaiLogo, url: "https://www.instagram.com/mioartai/" },
-  { name: "Dopamine Store", firm: "Dopamine Store", designation: "Merchandise and Lifestyle Partner", logo: dopamineStoreLogo, url: "https://thedopaminestore.in" },
-  { name: "ETHindia", firm: "ETHindia", designation: "Silver Sponsor", logo: ethindiaLogo, url: "https://www.instagram.com/ethindiaco/" },
-  { name: "Devfolio", firm: "Devfolio", designation: "Platform Partner", logo: devfolioLogo, url: "https://devfolio.co" },
+  // Gold Partners
+  { name: "Abhibus", firm: "Abhibus", designation: "Gold Partner", logo: abhibusLogo, url: "https://www.abhibus.com/" },
+  { name: "Pluto Drones", firm: "Pluto Drones", designation: "Gold Partner", logo: plutoDronesLogo, url: "https://www.plutodrones.com/", whiteBg: true },
+  // Merch Lifestyle Partners
+  { name: "Dopamine Store", firm: "Dopamine Store", designation: "Merchandise Partner", logo: dopamineStoreLogo, url: "https://thedopaminestore.in" },
+  { name: "Doon Merchandise", firm: "Doon Merchandise", designation: "Merchandise Partner", logo: doonLogo, url: "/merchandise", whiteBg: true },
+  // Platform Partners
   { name: "Unstop", firm: "Unstop", designation: "Platform Partner", logo: unstopLogo, url: "https://unstop.com" },
-  { name: "AEROSTAR", firm: "AEROSTAR", designation: "Technology and Innovation Partner", logo: aerostarLogo, url: "https://www.instagram.com/aerostar007/" },
+  { name: "GeeksforGeeks", firm: "GeeksforGeeks", designation: "Platform Partner", logo: gfgLogo, url: "https://www.geeksforgeeks.org/" },
+  { name: "CodeChef", firm: "CodeChef", designation: "Platform Partner", logo: codechefLogo, url: "https://www.codechef.com/" },
+  { name: "Devfolio", firm: "Devfolio", designation: "Platform Partner", logo: devfolioLogo, url: "https://devfolio.co" },
+  // Silver Partners
   { name: "InterviewBuddy", firm: "InterviewBuddy", designation: "Silver Sponsor", logo: interviewBuddyLogo, url: "https://interviewbuddy.net" },
+  { name: "ETHindia", firm: "ETHindia", designation: "Silver Sponsor", logo: ethindiaLogo, url: "https://www.instagram.com/ethindiaco/" },
+  // Other Partners
+  { name: "mioArtAI", firm: "mioArtAI", designation: "Theme Partner", logo: mioartaiLogo, url: "https://www.instagram.com/mioartai/" },
+  { name: "AEROSTAR", firm: "AEROSTAR", designation: "Technology Partner", logo: aerostarLogo, url: "https://www.instagram.com/aerostar007/" },
   { name: "Who's Next?", firm: "YOU?", designation: "JOIN US!", logo: whosNextLogo, url: "mailto:meraki@iiitu.ac.in" }
 ];
 
@@ -296,7 +313,7 @@ export default function Sponsors() {
         </div>
 
         {/* 
-         * Infinite Scrolling Sponsor Row
+         * Infinite Scrolling Sponsor Rows
          * 
          * Two rows of sponsors sliding in opposite directions
          */}
